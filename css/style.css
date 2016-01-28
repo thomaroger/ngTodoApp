@@ -5,3 +5,13 @@
 .red {
     color : red;
 }
+
+.list-group-item.ng-leave {
+   transition: opacity 1s ease-in-out;
+}
+
+.list-group-item.ng-enter,
+.list-group-item.ng-leave.ng-leave-active {
+  opacity:0;
+}
+    

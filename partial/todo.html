@@ -1,6 +1,8 @@
- <span class="glyphicon glyphicon-ok success" ng-show="todo.isDone" ></span>
-<span ng-hide="todo.isDone">
-    <a class="glyphicon glyphicon-ok" ng-click="tlc.setDone(todo)"></a>
-</span>
-{{todo.name}}
-<a class="glyphicon glyphicon-remove red" ng-click="tlc.setDelete(todo)"></a>
+<li ng-repeat="todo in tlc.todos" class="list-group-item"  ng-hide="todo.isDelete" >
+    <span class="glyphicon glyphicon-ok success" ng-show="todo.isDone" ></span>
+    <span ng-hide="todo.isDone">
+        <a class="glyphicon glyphicon-ok" ng-click="tlc.setDone(todo)"></a>
+    </span>
+    {{todo.name}}
+    <a class="glyphicon glyphicon-remove red" ng-click="tlc.setDelete(todo)"></a>
+</li>

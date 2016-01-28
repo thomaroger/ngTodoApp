@@ -1,5 +1,6 @@
 (function(){
-    var app = angular.module('todo', ['TodoS', 'TodoD']);
+    var dependencies = ['ngAnimate', 'TodoS', 'TodoD'];
+    var app = angular.module('todo', dependencies);
     
     app.controller('TodoListController', function (TodoService) {    
         this.todos = TodoService.getTodos();

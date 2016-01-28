@@ -31,13 +31,8 @@ angular.module('TodoS', [])
         };
 
         this.setDelete = function(todo){
-            todo.isDelete = true;
-            var index = 0;
-            for (var i= 0; i < this.todos.length; i++) {
-                if(this.todos[i].name == todo.name){
-                    index = i;
-                }
-            }
+            //todo.isDelete = true;
+            var index = this.todos.indexOf(todo);
             this.todos.splice(index,1);
         };
   
