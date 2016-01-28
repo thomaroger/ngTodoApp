@@ -1,4 +1,4 @@
-<li ng-repeat="todo in tlc.todos" class="list-group-item"  ng-hide="todo.isDelete" >
+<li ng-repeat="todo in tlc.todos" class="list-group-item" ng-class="{done:todo.isDone}"  ng-hide="todo.isDelete" >
     <span class="glyphicon glyphicon-ok success" ng-show="todo.isDone" ></span>
     <span ng-hide="todo.isDone">
         <a class="glyphicon glyphicon-ok" ng-click="tlc.setDone(todo)"></a>
